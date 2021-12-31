@@ -32,11 +32,9 @@ function checkKey(e) {
         for(var i =0;i<h.length;i++){
            if(h[i].srcset){
                srcset=h[i].srcset;
-               console.log(srcset);
                 if(h[i].srcset.includes("https://i.pinimg.com/originals/")){
                     var f =h[i].srcset.split(",");
                     f = f[f.length-1];
-                    console.log();
                     images[count]=f.substring(1,f.length-3);
                     count++;
                 }
@@ -44,10 +42,8 @@ function checkKey(e) {
         }
         start=1;
     }else{
-        console.log(index);
         index++;
         img.src = images[index];
-        console.log(images[index]);
     }
 
     }
